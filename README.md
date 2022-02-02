@@ -1,2 +1,7 @@
-# tiny-slider-implementation
-Implement tiny slider
+## Implement tiny slider dynamic load
+
+### Create example using bootstrap modal
+
+```
+
+```
