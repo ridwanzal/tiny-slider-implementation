@@ -85,18 +85,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="index.js"></script>
     <script>
-        var slider = tns({
-            container: '.js-slide',
-            items: 3,
-            nav: false,
-            slideBy: 1,
-            mouseDrag: true,
-            autoWidth: true,
-            autoplay: true
+        let sliderModal = null;
+
+        slider = tns({
+                container: '.js-slide',
+                items: 3,
+                nav: false,
+                slideBy: 1,
+                mouseDrag: true,
+                autoWidth: true,
+                autoplay: true
         });
-        let slider = null;
+        
         $('.my-modal').on('shown.bs.modal', function (event) {
-            let slider = tns({
+            sliderModal = tns({
                 container: '.js-slide-modal',
                 items: 3,
                 nav: false,
@@ -109,8 +111,8 @@
             slider.refresh();
         });
 
-        $('.my-modal').on('shown.bs.modal', function (event) { 
-            slider.destroy();
+        $('.my-modal').on('hidden.bs.modal', function (event) { 
+            sliderModal.destroy();
         });
     </script>
     <style>

@@ -10,9 +10,9 @@ not good for dynamic content, so the instance need to be initiate when it's invo
 Initiate tns instance when bootstrap is shown, and destroy when modal already kill/ hidden from dom. This will generate right behaviour. So, i think for you that comes with the same issue. You can use this as sample implementation
 
 ```
-        let slider = null;
+        let sliderModal = null;
         $('.my-modal').on('shown.bs.modal', function (event) {
-            let slider = tns({
+            sliderModal = tns({
                 container: '.js-slide-modal',
                 items: 3,
                 nav: false,
@@ -22,10 +22,10 @@ Initiate tns instance when bootstrap is shown, and destroy when modal already ki
                 autoplay: true
             });
             $('.js-slide-modal').show();
-            slider.refresh();
+            sliderModal.refresh();
         });
 
         $('.my-modal').on('shown.bs.modal', function (event) { 
-            slider.destroy();
+            sliderModal.destroy();
         });
 ```
