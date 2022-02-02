@@ -17,22 +17,22 @@ https://github.com/ganlanyuan/tiny-slider/issues/242
 Initiate tns instance when bootstrap is shown, and destroy when modal already kill/ hidden from dom. This will generate right behaviour. So, i think for you that comes with the same issue. You can use this as sample implementation
 
 ```
-        let sliderModal = null;
-        $('.my-modal').on('shown.bs.modal', function (event) {
-            sliderModal = tns({
-                container: '.js-slide-modal',
-                items: 3,
-                nav: false,
-                slideBy: 1,
-                mouseDrag: true,
-                autoWidth: true,
-                autoplay: true
-            });
-            $('.js-slide-modal').show();
-            sliderModal.refresh();
-        });
+let sliderModal = null;
+$('.my-modal').on('shown.bs.modal', function (event) {
+    sliderModal = tns({
+        container: '.js-slide-modal',
+        items: 3,
+        nav: false,
+        slideBy: 1,
+        mouseDrag: true,
+        autoWidth: true,
+        autoplay: true
+    });
+    $('.js-slide-modal').show();
+    sliderModal.refresh();
+});
 
-        $('.my-modal').on('shown.bs.modal', function (event) { 
-            sliderModal.destroy();
-        });
+$('.my-modal').on('shown.bs.modal', function (event) { 
+    sliderModal.destroy();
+});
 ```
