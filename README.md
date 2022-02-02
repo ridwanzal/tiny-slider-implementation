@@ -1,8 +1,8 @@
 ## Implement tiny slider dynamic load
 Tiny slider as replacer for owl carousel, bring minimal and great solutions without depend on jquery.
-This tiny library is behave like previous owl carousel with almost the same results. But for spesific use case
-this library need to be tweak according to repo documentation and author suggestions, below is the example
-for dynamic load using tiny slider. For static content that already serve in the dom, it works well, but tiny slider
+This tiny library is behave like previous owl carousel with almost the same results. But for spesific use case,
+this library need to be tweak according to repo documentation and author suggestions. So i made an example how to implement
+dynamic load using tiny slider. For static content that already serve in the dom, it works well, but tiny slider
 not good for dynamic content, so the instance need to be initiate when it's invoked. This relate to components like modal, view on click, tab and etc.
 
 ### Tiny slider instance on bootstrap modal
