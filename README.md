@@ -1,20 +1,21 @@
 # Implement tiny slider dynamic load
-Tiny slider as replacer for owl carousel, bring minimal and great solutions without depend on jquery.
-This tiny library is behave like previous owl carousel with almost the same results. But for spesific use case,
-this library need to be tweak according to repo documentation and author suggestions. So i made an example how to implement
-dynamic load using tiny slider. For static content that already serve in the dom, it works well, but tiny slider not good for dynamic content, so the instance need to be initiate when it's invoked. This relate to components like modal, view on click, tab and etc.
+As replacer for owl carousel, tiny slider bring minimal and great solutions without depend on jquery.
+This tiny library is behave like previous owl carousel with almost the same results, but for spesific use case,
+this library need to be tweak according to repo documentation and author suggestions. So, I made an example about, how to implement
+dynamic load using tiny slider library. It worked well for static content, but not for dynamic load. So we need to initiate the instance when the event was invoked. This issue was related to components like : modal, view on click, tab and etc.
 
 Original Repository : 
 <a target="_blank" href="https://github.com/ganlanyuan/tiny-slider">tiny slider</a>
 
-Related issue: <br/>
+Related issues: <br/>
 https://github.com/ganlanyuan/tiny-slider/issues/223 <br/>
 https://github.com/ganlanyuan/tiny-slider/issues/157 <br/>
 https://github.com/ganlanyuan/tiny-slider/issues/242
                          
 ### Tiny slider instance on bootstrap modal
-
-Initiate tns instance when bootstrap is shown, and destroy when modal already kill/ hidden from dom. This will generate right behaviour. So, i think for you that comes with the same issue. You can use this as sample implementation
+Below, the example of, how to implement and mimic the behaviour when using tiny slider for dynamic load.
+Initiate tns instance when bootstrap is shown, and destroy when modal already kill/ hidden from the dom. This will generate correct behaviour. 
+So, I think for you that comes with the same issue, you can use this as sample implementation. Thankyou
 
 ```
 let sliderModal = null;
